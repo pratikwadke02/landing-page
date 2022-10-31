@@ -29,9 +29,11 @@ const Navbar = () => {
 
   return (
     <>
-    <Box sx={{display:'flex', flexDirection:'column', p:5}}>
+    <Box sx={{display:{md:'flex'}, flexDirection:'column',alignItems:'center', width:'100%'}}>
         <Box sx={{}}>
-            <img src={images.acm_logo} alt="" height={150}  />
+            <a href="http://djacm.co.in/">
+            <img src={images.acm_logo} alt=""  style={{width:'100%', height:'auto', maxHeight:'150px'}} />
+            </a>
         </Box>
         <Box>
             {

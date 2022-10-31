@@ -29,7 +29,7 @@ const Landing = () => {
                     zIndex: '-1'
                 }}
             />
-            <Box>
+            <Box sx={{display:{xs:'none', md:'flex'} ,width:'100%', maxWidth:"200px"}}>
                 <Navbar/>
             </Box>
             <Box sx={{width:'100%'}}>

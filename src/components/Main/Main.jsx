@@ -32,28 +32,30 @@ const Main = ({countdownTimestampMs}) => {
     const socials = [
         {
             icon: <InstagramIcon fontSize="large" sx={{color:'#fff'}}/>,
-            link: 'https://www.instagram.com/acm_svnit/',
+            link: 'https://www.instagram.com/djsanghvi_acm/',
         },
         {
             icon: <LinkedInIcon fontSize="large" sx={{color:'#fff'}}/>,
-            link: 'https://www.linkedin.com/company/acm-svnit/',
+            link: 'https://www.linkedin.com/company/dj-sanghvi-acm/',
         },
         {
             icon: <LanguageIcon fontSize="large" sx={{color:'#fff'}}/>,
-            link: 'https://acm.svnit.ac.in/',
+            link: 'http://djacm.co.in/',
         },
     ]
 
   return (
     <>
-    <Box sx={{display:'flex', flexDirection:'column', width:'100%'}}>
-        <Box sx={{width:'100%'}}>
+    <Box sx={{display:'flex', flexDirection:'column', width:'100%', }}>
+        <Box sx={{width:'100%', height:'10vh'}}>
             <Box sx={{display:'flex', flexDirection:'row', justifyContent:'space-between', p:5, float:'right'}}>
                 {
                     socials.map((item, index) => {
                         return (
                             <Box key={index} sx={{cursor:'pointer', m:2}}>
+                                <a href={item.link} target="_blank" rel="noreferrer">
                                 {item.icon}
+                                </a>
                             </Box>
                         )
                     }
@@ -61,7 +63,7 @@ const Main = ({countdownTimestampMs}) => {
                 }
             </Box>
         </Box>
-        <Box sx={{display:'flex', flexDirection:'column', maxWidth:'900px', p:6 }}>
+        <Box sx={{display:'flex', flexDirection:'column', maxWidth:'900px', p:6, height:'30vh' }}>
             <Box sx={{display:'flex', flexDirection:'column', mt:10,width:'100%', alignItems:'initial'}}>
                 <Typography variant="h1" sx={{color:'#fff', fontSize:'150px'}}>LOC 5.0</Typography>
             </Box>
@@ -71,9 +73,9 @@ const Main = ({countdownTimestampMs}) => {
                 <Typography variant="h1" sx={{color:'#fff', fontSize:'60px'}}>LINES OF CODE</Typography>
             </Box>
         </Box>
-        <Box sx={{width:'100%', mt:10}}>
-            <Box sx={{float:'right', p:5, display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'center'}}>
-                <Box sx={{display:'flex', flexDirection:'column', borderRight:'#fff 3px solid', p:3, alignItems:'center'}}>
+        <Box sx={{width:'100%',mt:10, height:'20vh', display:'flex', flexDirection:'column', alignItems:'flex-end'}}>
+            <Box sx={{mt:10, p:5, display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'center'}}>
+                <Box sx={{display:'flex', flexDirection:'column', borderRight:'#fff 3px solid', p:2, alignItems:'center',}}>
                     <Box>
                     <Typography  sx={{color:'#fff', fontSize:'32px'}}>{remainingTime.days}</Typography>
                     </Box>
@@ -81,7 +83,7 @@ const Main = ({countdownTimestampMs}) => {
                         <Typography  sx={{color:'#fff', fontSize:'32px'}}>Days</Typography>
                     </Box>
                 </Box>
-                <Box sx={{display:'flex', flexDirection:'column', borderRight:'#fff 3px solid', p:3, alignItems:'center'}}>
+                <Box sx={{display:'flex', flexDirection:'column', borderRight:'#fff 3px solid', p:2, alignItems:'center'}}>
                     <Box>
                     <Typography  sx={{color:'#fff', fontSize:'32px'}}>{remainingTime.hours}</Typography>
                     </Box>
@@ -89,7 +91,7 @@ const Main = ({countdownTimestampMs}) => {
                         <Typography  sx={{color:'#fff', fontSize:'32px'}}>Hours</Typography>
                     </Box>
                 </Box>
-                <Box sx={{display:'flex', flexDirection:'column', borderRight:'#fff 3px solid', p:3, alignItems:'center'}}>
+                <Box sx={{display:'flex', flexDirection:'column', borderRight:'#fff 3px solid', p:2, alignItems:'center'}}>
                     <Box>
                     <Typography  sx={{color:'#fff', fontSize:'32px'}}>{remainingTime.minutes}</Typography>
                     </Box>
