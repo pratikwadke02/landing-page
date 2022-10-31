@@ -11,19 +11,19 @@ const Navbar = () => {
     const navItems = [
         {
             name: 'HOME',
-            icon: <HomeOutlinedIcon fontSize="large" sx={{color:'#fff'}}/>,
+            icon: <HomeOutlinedIcon fontSize="large" sx={{color:'#fff', fontSize:'30px'}}/>,
         },
         {
             name: 'THEMES',
-            icon: <ContentCopyOutlinedIcon fontSize="large" sx={{color:'#fff'}} />,
+            icon: <ContentCopyOutlinedIcon fontSize="large" sx={{color:'#fff', fontSize:'30px'}} />,
         },
         {
             name: 'RULES',
-            icon: <DescriptionOutlinedIcon fontSize="large" sx={{color:'#fff'}}/>,
+            icon: <DescriptionOutlinedIcon fontSize="large" sx={{color:'#fff', fontSize:'30px'}}/>,
         },
         {
             name: 'FAQS',
-            icon: <LiveHelpOutlinedIcon fontSize="large" sx={{color:'#fff'}}/>,
+            icon: <LiveHelpOutlinedIcon fontSize="large" sx={{color:'#fff', fontSize:'30px'}}/>,
         },
     ]
 
@@ -42,7 +42,7 @@ const Navbar = () => {
                                 {item.icon}
                             </Box>
                             <Box sx={{pb:'10px'}}>
-                            <Typography variant="h6" sx={{color:'#fff'}}>{item.name}</Typography>
+                            <Typography variant="h4" sx={{color:'#fff'}}>{item.name}</Typography>
                             </Box>
                         </Box>
                     )
