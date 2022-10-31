@@ -15,6 +15,7 @@ const Landing = () => {
             // backgroundPosition: 'center',
             // backgroundRepeat: 'no-repeat',
             minHeight: '100vh',
+            height: '100%',
         }}>
             <video autoPlay loop muted
                 src={images.bg_mov}
