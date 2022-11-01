@@ -6,6 +6,10 @@ import LanguageIcon from '@mui/icons-material/Language';
 import { getRemainingTimeUntilMsTimestamp } from '../utils/TimerUtil';
 import MenuIcon from '@mui/icons-material/Menu';
 import {images} from '../../constants'
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import ContentCopyOutlinedIcon from '@mui/icons-material/ContentCopyOutlined';
+import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
+import LiveHelpOutlinedIcon from '@mui/icons-material/LiveHelpOutlined';
 
 const defaultRemainingTime = {
     months: 0,
@@ -66,6 +70,25 @@ const Main = ({countdownTimestampMs}) => {
         },
     ]
 
+    const navItems = [
+        {
+            name: 'HOME',
+            icon: <HomeOutlinedIcon fontSize="medium" sx={{color:'#fff', }}/>,
+        },
+        {
+            name: 'THEMES',
+            icon: <ContentCopyOutlinedIcon fontSize="medium" sx={{color:'#fff', }} />,
+        },
+        {
+            name: 'RULES',
+            icon: <DescriptionOutlinedIcon fontSize="medium" sx={{color:'#fff', }}/>,
+        },
+        {
+            name: 'FAQS',
+            icon: <LiveHelpOutlinedIcon fontSize="medium" sx={{color:'#fff', }}/>,
+        },
+    ]
+
     const toggleDrawer = (anchor, open) => (event) => {
         if (
           event &&
@@ -90,19 +113,17 @@ const Main = ({countdownTimestampMs}) => {
           </Box>
           <List sx={{display:'flex', flexDirection:'column'}}>
             {
-                socialsSmall.map((social, index) => (
-                    <a href={social.link} target="_blank" rel="noreferrer" style={{textDecoration:'none', color:'#fff'}}>
+                navItems.map((item, index) => (
                     <ListItem button key={index} sx={{width:'100%', display:'flex', justifyContent:'start', alignItems:'center', paddingLeft:'20px'}}>
                             <ListItemIcon>
-                            {social.icon}
+                            {item.icon}
                             </ListItemIcon>
                             <ListItemText>
                                 <Typography variant="h6" sx={{color:'#fff'}}>
-                                    {social.text}
+                                    {item.name}
                                 </Typography>
                             </ListItemText>
                     </ListItem>
-                    </a>
                 ))
             }
           </List>
