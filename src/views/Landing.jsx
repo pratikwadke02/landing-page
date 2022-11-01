@@ -14,7 +14,7 @@ const Landing = () => {
             // backgroundSize: 'cover',
             // backgroundPosition: 'center',
             // backgroundRepeat: 'no-repeat',
-            minHeight: '100vh',
+            minHeight: {xs:'100%', sm:'100vh'},
             height: '100%',
         }}>
             <video autoPlay loop muted
