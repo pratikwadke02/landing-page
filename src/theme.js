@@ -3,29 +3,29 @@ import { createTheme } from "@mui/material";
 export const theme = createTheme({
   palette: {
     primary: {
-      main: "#ae1555",
-      light: "#2196f3",
-      dark: "#424242",
+      main: "#090533",
+      light: "#b98ce4",
+      dark: "#320d83",
     },
     secondary: {
-      main: "#fff",
-      // dark: "#fff",
+      main: "#b98ce4",
+      dark: "#fff",
     },
     text: {
-      main: "#000", 
-      light: "#d2d2d2", 
-      dark: "#6C757D",
+      main: "#000",
+      light: "#d2d2d2",
+      dark: "#090533",
       default: "#fff",
     },
     background: {
       default: "#fff", //for card background
       main: "#ae1555", //for background
-      light: "#faf6f2",
+      light: "b98ce4",
     },
     error: {
       main: "#ff0000", //for text and buttons
       bg: "#ffebeb",
-       //for background and outline
+      //for background and outline
     },
     warning: {
       main: "#e5a200", //for warning text
@@ -38,7 +38,7 @@ export const theme = createTheme({
     },
     active: {
       main: "#56ca00",
-      bg: "#eaf5ea"
+      bg: "#eaf5ea",
     },
     login: {
       main: "#1554f6",
@@ -86,16 +86,16 @@ export const theme = createTheme({
       margin: "0 0 0 0",
     },
     h6: {
-        fontSize: "14px",
-        fontWeight: 400,
-        lineHeight: "28px",
-        margin: "0 0 0 0",
+      fontSize: "14px",
+      fontWeight: 400,
+      lineHeight: "28px",
+      margin: "0 0 0 0",
     },
     h7: {
-        fontSize: "10px",
-        fontWeight: 400,
-        lineHeight: "16px",
-        margin: "0 0 0 0",
+      fontSize: "10px",
+      fontWeight: 400,
+      lineHeight: "16px",
+      margin: "0 0 0 0",
     },
   },
   components: {

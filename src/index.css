@@ -3,13 +3,13 @@ body {
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif; */
-    font-family: 'Baumans', cursive;
+  font-family: "Baumans", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   /* font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', */
-    /* monospace; */
-    font-family: 'Baumans', cursive;
+  /* monospace; */
+  font-family: "Baumans", cursive;
 }
