@@ -65,7 +65,7 @@ const Landing = () => {
               onClose={handleClose}
               sx={{ color: "text.dark", fontWeight: "bold" }}>
               <MenuItem onClick={handleClose} component={Link} to='/signup'>
-                Sign Up
+                Signup
               </MenuItem>
             </Menu>
           </Box>

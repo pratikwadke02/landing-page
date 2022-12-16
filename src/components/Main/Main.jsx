@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Box, Typography, Menu } from "@mui/material";
 
 import { getRemainingTimeUntilMsTimestamp } from "../utils/TimerUtil";
+import { HorizontalRule } from "@mui/icons-material";
 
 const defaultRemainingTime = {
   months: 0,
@@ -29,11 +30,9 @@ const Main = ({ countdownTimestampMs, hamburger }) => {
     <Box sx={{ width: "100%" }}>
       <Box
         sx={{
-          display: "flex",
-          flexDirection: "column",
+          display: "grid",
           maxWidth: "900px",
-          p: { xs: 3, sm: 6 },
-          m: { xs: "2em 2em 0", md: "3em 3em 0" },
+          m: { xs: "2em", md: "3em" },
           textAlign: { xs: "center", sm: "start" },
         }}>
         <Typography
@@ -41,19 +40,13 @@ const Main = ({ countdownTimestampMs, hamburger }) => {
           sx={{
             color: "#fff",
             fontSize: { xs: "80px", sm: "100px", md: "150px" },
+            borderBottom: { xs: "#fff 10px solid", md: "#fff 15px solid" },
+            maxWidth: { xs: "350px", md: "550px" },
+            height: "0.8em",
           }}>
           LOC 5.0
         </Typography>
-        <Box
-          sx={{
-            // display: "flex",
-            // flexDirection: "column",
-            // alignItems: "center",
-            mt: "3em",
-            borderTop: { xs: "#fff 10px solid", md: "#fff 15px solid" },
-            maxWidth: { xs: "350px", md: "550px" },
-            width: "100%",
-          }}></Box>
+
         <Box
           sx={{
             display: "flex",
@@ -80,7 +73,7 @@ const Main = ({ countdownTimestampMs, hamburger }) => {
       <Box
         sx={{
           width: "100%",
-          // mt: 10,
+          mt: "3em",
           display: "flex",
           flexDirection: "column",
           alignItems: { xs: "center", sm: "flex-end" },

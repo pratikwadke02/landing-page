@@ -20,29 +20,26 @@ import MenuIcon from "@mui/icons-material/Menu";
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
+  const size = "2rem";
   const navItems = [
     {
       name: "HOME",
-      icon: <HomeOutlinedIcon sx={{ color: "#fff", fontSize: "30px" }} />,
+      icon: <HomeOutlinedIcon sx={{ color: "#fff", fontSize: size }} />,
       to: "/",
     },
     {
       name: "THEMES",
-      icon: (
-        <ContentCopyOutlinedIcon sx={{ color: "#fff", fontSize: "30px" }} />
-      ),
+      icon: <ContentCopyOutlinedIcon sx={{ color: "#fff", fontSize: size }} />,
       to: "/themes",
     },
     {
       name: "RULES",
-      icon: (
-        <DescriptionOutlinedIcon sx={{ color: "#fff", fontSize: "30px" }} />
-      ),
+      icon: <DescriptionOutlinedIcon sx={{ color: "#fff", fontSize: size }} />,
       to: "rules",
     },
     {
       name: "FAQS",
-      icon: <LiveHelpOutlinedIcon sx={{ color: "#fff", fontSize: "30px" }} />,
+      icon: <LiveHelpOutlinedIcon sx={{ color: "#fff", fontSize: size }} />,
       to: "/faqs",
     },
   ];
