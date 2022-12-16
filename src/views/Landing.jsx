@@ -82,14 +82,17 @@ const Landing = () => {
               />
               <Route
                 path='/themes'
-                element={<div className='test'>Themes</div>}
+                element={<div className='test'>Coming Soon...</div>}
               />
               <Route
                 path='/rules'
-                element={<div className='test'>Rules</div>}
+                element={<div className='test'>Coming Soon...</div>}
               />
               <Route path='/signup' element={<SignUp />} />
-              <Route path='/faqs' element={<Faq />} />
+              <Route
+                path='/faqs'
+                element={<div className='test'>Coming Soon...</div>}
+              />
             </Routes>
           </Box>
           <Socials />

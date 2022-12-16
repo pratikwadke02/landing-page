@@ -9,11 +9,18 @@ sup {
   font-size: 0.5em;
 }
 
+:has(.test) {
+  position: relative;
+}
+
 .test {
-  outline: 2px red solid;
+  /* outline: 2px red solid; */
   margin: 1em;
   display: grid;
   place-items: center;
   color: azure;
   font-weight: bold;
+  position: absolute;
+  inset: 0;
+  font-size: 48px;
 }
