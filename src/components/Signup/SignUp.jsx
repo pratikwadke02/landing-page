@@ -9,11 +9,14 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const labelStyle = { sx: { color: "text.dark" }, color: "primary" };
-  const [Details, setDetails] = useState({});
-  const [Success, setSuccess] = useState(false);
+  const [Details, setDetails] = useState({ notify: false });
+  const [Success, setSuccess] = useState({ notify: false, signup: false });
+
+  const nav = useNavigate();
 
   const update = e => {
     const { name, value } = e.target;
@@ -32,8 +35,10 @@ const SignUp = () => {
     });
     let data = await res.json();
     let success = res.status == 201;
+    console.log(data);
     console.log(success, data.notify);
-    setSuccess(success && data.notify);
+    setSuccess({ signup: success, notify: data.notify });
+    setTimeout(_ => nav("/"), 3000);
   };
 
   return (
@@ -73,7 +78,7 @@ const SignUp = () => {
           InputLabelProps={labelStyle}
           onChange={update}
           name='first_name'
-          disabled={Success}
+          disabled={Success.signup}
         />
         <TextField
           id='lname'
@@ -83,7 +88,7 @@ const SignUp = () => {
           InputLabelProps={labelStyle}
           onChange={update}
           name='last_name'
-          disabled={Success}
+          disabled={Success.signup}
         />
         <TextField
           id='phone'
@@ -94,7 +99,7 @@ const SignUp = () => {
           onChange={update}
           name='phone_number'
           fullWidth
-          disabled={Success}
+          disabled={Success.signup}
         />
         <TextField
           id='email'
@@ -106,7 +111,7 @@ const SignUp = () => {
           InputLabelProps={labelStyle}
           onChange={update}
           name='email_id'
-          disabled={Success}
+          disabled={Success.signup}
         />
         <FormControlLabel
           value='end'
@@ -141,9 +146,10 @@ const SignUp = () => {
           Sign Up
         </Button>
 
-        {Success ? (
+        {Success.signup ? (
           <Typography variant='h2' sx={{ gridColumn: "1 / -1" }}>
-            Thank for subscribing for updates!
+            Thanks for
+            {Success.notify ? " subscribing for updates!" : " signing up!"}
           </Typography>
         ) : null}
       </Box>
