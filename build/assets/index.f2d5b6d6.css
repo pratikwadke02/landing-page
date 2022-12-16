@@ -1,0 +1,1 @@
+*{box-sizing:border-box;margin:0;padding:0}sup{font-size:.5em}:has(.test){position:relative}.test{margin:1em;display:grid;place-items:center;color:azure;font-weight:700;position:absolute;inset:0;font-size:48px}body{margin:0;font-family:Baumans,cursive;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}code{font-family:Baumans,cursive}

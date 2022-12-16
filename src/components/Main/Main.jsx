@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Box, Typography, Menu } from "@mui/material";
+// import { Box, Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 
 import { getRemainingTimeUntilMsTimestamp } from "../utils/TimerUtil";
-import { HorizontalRule } from "@mui/icons-material";
 
 const defaultRemainingTime = {
   months: 0,
