@@ -30,7 +30,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
-  const size = "2rem";
+  const size = "2.5rem";
   const navItems = [
     {
       name: "HOME",

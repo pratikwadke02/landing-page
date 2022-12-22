@@ -1,9 +1,5 @@
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-// import { Box, IconButton, Menu, MenuItem } from "@mui/material";
-import Box from "@mui/material/Box";
-import IconButton from "@mui/material/IconButton";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
+import { Box, IconButton, Menu, MenuItem } from "@mui/material";
 import React, { useState } from "react";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import Faq from "../components/Faq/Faq";
@@ -43,9 +39,10 @@ const Landing = () => {
           sx={{
             display: "grid",
             gridTemplateColumns: { xs: "100px 1fr", md: "auto 1fr" },
-            gridTemplateRows: { xs: "100px 1fr auto", md: "5em 1fr 5em" },
-            minHeight: { xs: "100%", sm: "100vh" },
-            // height: "100%",
+            gridTemplateRows: { xs: "100px 1fr 100px", md: "5em 1fr 5em" },
+            minHeight: { xs: "90vh", sm: "100vh" },
+            position: "relative",
+            bottom: "0",
           }}>
           <Navbar />
 
@@ -59,7 +56,7 @@ const Landing = () => {
             }}>
             <IconButton onClick={handleClick}>
               <AccountCircleOutlinedIcon
-                sx={{ color: "#fff", fontSize: { xs: "4rem", md: "3rem" } }}
+                sx={{ color: "#fff", fontSize: "3rem" }}
               />
             </IconButton>
             <Menu
@@ -84,6 +81,7 @@ const Landing = () => {
                 path='/'
                 element={<Main countdownTimestampMs={1677974399000} />}
               />
+              <Route path='/signup' element={<SignUp />} />
               <Route
                 path='/themes'
                 element={<div className='test'>Coming Soon...</div>}
@@ -92,11 +90,7 @@ const Landing = () => {
                 path='/rules'
                 element={<div className='test'>Coming Soon...</div>}
               />
-              <Route path='/signup' element={<SignUp />} />
-              <Route
-                path='/faqs'
-                element={<div className='test'>Coming Soon...</div>}
-              />
+              <Route path='/faqs' element={<Faq />} />
             </Routes>
           </Box>
           <Socials />

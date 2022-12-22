@@ -48,9 +48,9 @@ const SignUp = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "#06021B",
+        backgroundColor: "background.dark",
         color: "#fff",
-        width: { xs: "80%", md: "70%" },
+        width: { xs: "85%", md: "60%" },
         borderRadius: "30px",
         boxShadow: "#05031680 0 0 20px 25px",
         scale: "0.85",
@@ -67,8 +67,7 @@ const SignUp = () => {
           gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
           placeItems: "center",
           gap: "0.5em",
-          p: "1.5em",
-          pt: "0",
+          p: { xs: "0 1em 1em", md: "0 1.5em 1.5em" },
           fontSize: "48px",
           "& .MuiTextField-root": { backgroundColor: "#cb9afb" },
         }}
@@ -129,7 +128,9 @@ const SignUp = () => {
             />
           }
           label={
-            <Typography variant='h3' sx={{ fontSize: "28px" }}>
+            <Typography
+              variant='h3'
+              sx={{ fontSize: { xs: "20px", md: "28px" } }}>
               I agree to recieve updates regarding LOC 5.0!
             </Typography>
           }
@@ -143,7 +144,7 @@ const SignUp = () => {
             gridColumn: "1 / -1",
             borderRadius: "10px",
             "&:hover": { color: "#fff" },
-            width: "40%",
+            width: { xs: "auto", md: "45%" },
           }}
           onClick={signup}
           color='secondary'>

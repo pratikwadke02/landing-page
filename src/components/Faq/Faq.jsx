@@ -11,47 +11,70 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import React from "react";
+import React, { useState } from "react";
 
 const Faq = () => {
+  const [Expanded, setExpanded] = useState(null);
   const Questions = [
     {
-      Q: "Question 1",
-      A: "This is Answers 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      Q: "WHO IS THIS EVENT FOR?",
+      A: "This event is open to all engineering as well as non engineering students currently pursuing a bachelor's degree.",
     },
     {
-      Q: "Question 2",
-      A: "This is Answers 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      Q: "ARE THERE ANY PREREQUISITES OR REQUIRED SKILLS?",
+      A: "Having experience in development and coding is a huge plus, teams will also need people with strong presentation skills and brilliant ideas.",
     },
     {
-      Q: "Question 3",
-      A: "This is Answers 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      Q: "DO I NEED A TEAM?",
+      A: "Yes, a team is needed to participate in the hackathon. The team size should be 2 to 4 members.",
     },
     {
-      Q: "Question 4",
-      A: "This is Answers 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      Q: "HOW MUCH DOES IT COST?",
+      A: "The participation in LOC 5.0 is free of cost.",
+    },
+    {
+      Q: "WHAT IS THE DURATION OF HACKATHON?",
+      A: "It is a 24 hour hackathon which will be conducted in a hybrid mode.",
+    },
+    {
+      Q: "WHAT ARE THE PRIZES?",
+      A: "Winners will get cash prizes and goodies which will be disclosed soon before the hackathon.",
     },
   ];
 
   return (
-    <Box sx={{ width: "70%", m: "5em 0 0 5em" }}>
+    <Box
+      sx={{
+        width: { xs: "auto", md: "60%" },
+        m: { xs: "auto 1em" },
+        ".Mui-expanded": { marginBlock: "0.75em", borderRadius: "4px" },
+      }}>
       {Questions.map((item, i) => (
         <Accordion
           key={i}
-          disableGutters
           sx={{
             backgroundColor: "background.light",
             color: "text.dark",
-            fontSize: "large",
-          }}>
+          }}
+          expanded={Expanded == i}
+          onChange={_ => setExpanded(x => (x == i ? null : i))}>
           <AccordionSummary
+            sx={{ fontSize: "12px" }}
             expandIcon={<ExpandMoreIcon />}
             aria-controls='panel1a-content'
             id='panel1a-header'>
-            <Typography sx={{ fontWeight: "bold" }}>{item.Q}</Typography>
+            <Typography
+              sx={{ fontWeight: "bold", fontSize: { xs: "16px", md: "24px" } }}
+              variant='h1'>
+              {item.Q}
+            </Typography>
           </AccordionSummary>
-          <AccordionDetails>
-            <Typography>{item.A}</Typography>
+          <AccordionDetails sx={{ color: "primary.main" }}>
+            <Typography
+              sx={{ fontSize: { xs: "16px", md: "24px" } }}
+              variant='body1'>
+              {item.A}
+            </Typography>
           </AccordionDetails>
         </Accordion>
       ))}

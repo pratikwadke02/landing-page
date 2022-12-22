@@ -21,7 +21,8 @@ export const theme = createTheme({
     background: {
       default: "#fff", //for card background
       main: "#ae1555", //for background
-      light: "b98ce4",
+      light: "#b98ce4",
+      dark: "#06021B",
     },
     error: {
       main: "#ff0000", //for text and buttons
