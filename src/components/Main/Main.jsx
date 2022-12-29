@@ -176,7 +176,7 @@ const Main = ({ countdownTimestampMs, hamburger }) => {
               gridColumn: "1 / -1",
               textAlign: "center",
             }}>
-            3<sup>rd</sup> & 4<sup>th</sup> March, 2023
+            4<sup>th</sup> & 5<sup>th</sup> March, 2023
           </Typography>
         </Box>
       </Box>
