@@ -27,7 +27,7 @@ const Main = ({ countdownTimestampMs, hamburger }) => {
     setRemainingTime(getRemainingTimeUntilMsTimestamp(countdown));
   };
 
-  const countdownSize = { xs: "1rem", md: "1rem", lg: "1.5rem" };
+  const countdownSize = { xs: "0.75rem", md: "1rem", lg: "1.5rem" };
   return (
     <Box
       sx={{
@@ -49,10 +49,10 @@ const Main = ({ countdownTimestampMs, hamburger }) => {
           variant='h1'
           sx={{
             color: "#fff",
-            fontSize: { xs: "80px", sm: "100px", md: "4.5rem", lg: "6rem", xl: "7.5rem" },
+            fontSize: { xs: "3rem", sm: "100px", md: "4.5rem", lg: "6rem", xl: "7.5rem" },
             lineHeight: "1.2",
             borderBottom: { xs: "#fff 10px solid", md: "#fff 12px solid" },
-            maxWidth: { xs: "6.25ch", md: "6.25ch" },
+            minWidth: { xs: "7ch", md: "6.25ch" },
           }}>
           LOC 5.0
         </Typography>

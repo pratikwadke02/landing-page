@@ -5,7 +5,7 @@ import LanguageIcon from "@mui/icons-material/Language";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Socials = () => {
-  const size = { xs: "3rem", md: "1.5rem", lg: "2.5rem" };
+  const size = { xs: "2rem", md: "1.5rem", lg: "2.5rem" };
 
   const socials = [
     {
