@@ -38,7 +38,7 @@ const Main = ({ countdownTimestampMs, hamburger }) => {
       }}>
       <Box
         sx={{
-          display: "block",
+          display: "flex",
           flexDirection: "column",
           alignItems: { xs: "center", sm: "start" },
           maxWidth: "900px",
