@@ -57,7 +57,7 @@ const Main = ({ countdownTimestampMs, hamburger }) => {
           LOC 5.0
         </Typography>
 
-        <Box sx={{ mt: { md: "1em", lg: "2em" } }}>
+        <Box sx={{ mt: { xs: "1em", md: "1.5em", lg: "2em" } }}>
           <Typography
             variant='h2'
             sx={{
