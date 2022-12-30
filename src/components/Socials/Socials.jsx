@@ -30,7 +30,7 @@ const Socials = () => {
         placeItems: "center",
         width: "fit-content",
         gap: "1.5em",
-        m: { xs: "0.25em auto", md: "1em 2em", lg: "1.5em 2em" },
+        m: { xs: "0.25em auto", md: "1em 3em", lg: "1.5em 4em" },
         gridColumn: { xs: "1 / -1", md: "auto" },
       }}>
       {socials.map((item, index) => {

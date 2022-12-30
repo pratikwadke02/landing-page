@@ -39,7 +39,7 @@ const Landing = () => {
           sx={{
             display: "grid",
             gridTemplateColumns: { xs: "100px 1fr", md: "auto 1fr" },
-            gridTemplateRows: { xs: "100px 1fr 100px", md: "3em auto 3rem" },
+            gridTemplateRows: { xs: "100px 1fr 100px", md: "5em auto 3rem" },
             minHeight: { xs: "90vh", sm: "95vh" },
             position: "relative",
             bottom: "0",
@@ -50,7 +50,7 @@ const Landing = () => {
             sx={{
               display: "flex",
               alignItems: "flex-end",
-              justifyContent: { xs: "center", md: "none" },
+              justifyContent: "center",
               flexDirection: "column",
               p: { xs: "0 1em", md: "0.75em" },
             }}>

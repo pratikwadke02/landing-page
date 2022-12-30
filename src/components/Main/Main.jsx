@@ -42,7 +42,7 @@ const Main = ({ countdownTimestampMs, hamburger }) => {
           flexDirection: "column",
           alignItems: { xs: "center", sm: "start" },
           maxWidth: "900px",
-          m: { xs: "0 2em", md: "1em 3em 0", lg: "1em 2em 0" },
+          m: { xs: "0 2em", md: "1em 3em 0", lg: "2.5em 4em 0" },
           textAlign: { xs: "center", sm: "start" },
         }}>
         <Typography
