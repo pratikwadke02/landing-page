@@ -28,19 +28,13 @@ const Socials = () => {
         display: "grid",
         gridTemplateColumns: "repeat(3,1fr)",
         placeItems: "center",
-        height: "100px",
         width: "300px",
         m: { xs: "0 auto", md: "0 2em" },
         gridColumn: { xs: "1 / -1", md: "auto" },
       }}>
       {socials.map((item, index) => {
         return (
-          <Box
-            key={index}
-            component='a'
-            href={item.link}
-            target='_blank'
-            rel='noreferrer'>
+          <Box key={index} component='a' href={item.link} target='_blank' rel='noreferrer'>
             {item.icon}
           </Box>
         );

@@ -27,44 +27,52 @@ const Main = ({ countdownTimestampMs, hamburger }) => {
     setRemainingTime(getRemainingTimeUntilMsTimestamp(countdown));
   };
 
+  const countdownSize = { xs: "1rem", md: "1.25rem", lg: "1.6rem" };
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box
+      sx={{
+        height: "100%",
+        width: "100%",
+        display: "grid",
+        gridTemplateRows: "1fr auto",
+      }}>
       <Box
         sx={{
-          display: "grid",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: { xs: "center", sm: "start" },
           maxWidth: "900px",
-          m: { xs: "2em", md: "3em" },
+          m: { xs: "0 2em", md: "1.5em 3em 0" },
           textAlign: { xs: "center", sm: "start" },
         }}>
         <Typography
           variant='h1'
           sx={{
             color: "#fff",
-            fontSize: { xs: "80px", sm: "100px", md: "150px" },
-            borderBottom: { xs: "#fff 10px solid", md: "#fff 15px solid" },
-            maxWidth: { xs: "350px", md: "550px" },
-            height: "0.8em",
+            fontSize: { xs: "80px", sm: "100px", md: "5rem", lg: "5rem", xl: "7.5rem" },
+            lineHeight: "1.2",
+            borderBottom: { xs: "#fff 10px solid", md: "#fff 12px solid" },
+            minWidth: { xs: "6.25ch", md: "6.25ch" },
           }}>
           LOC 5.0
         </Typography>
 
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            mt: "3em",
-          }}>
+        <Box sx={{ mt: "2em" }}>
           <Typography
-            variant='h1'
-            sx={{ color: "#fff", fontSize: { xs: "30px", md: "60px" } }}>
+            variant='h2'
+            sx={{
+              color: "#fff",
+              fontSize: { xs: "1.75rem", md: "2rem", lg: "2rem", xl: "3rem" },
+              lineHeight: "1.2",
+            }}>
             LINES OF CODE
           </Typography>
 
           <Typography
-            variant='h1'
+            variant='h3'
             sx={{
               color: "#fff",
-              fontSize: { xs: "16px", md: "24px" },
+              fontSize: { xs: "1rem", md: "1.25rem", lg: "1.25rem", xl: "1..5rem" },
               mt: "0.5em",
             }}>
             DJSCE ACM 24-hour annual hackathon
@@ -73,21 +81,17 @@ const Main = ({ countdownTimestampMs, hamburger }) => {
       </Box>
       <Box
         sx={{
-          width: "100%",
-          mt: "3em",
           display: "flex",
-          flexDirection: "column",
-          alignItems: { xs: "center", sm: "flex-end" },
+          flexDirection: "row",
+          justifyContent: "flex-end",
         }}>
         <Box
           sx={{
-            // mt: 10,
-            p: { xs: 0, md: 5 },
             display: "grid",
             gridTemplateColumns: "repeat(4,1fr)",
             alignItems: "center",
             justifyContent: "center",
-            mr: { md: "3em" },
+            m: { md: "0 5em 3em 0" },
           }}>
           <Box
             sx={{
@@ -97,16 +101,12 @@ const Main = ({ countdownTimestampMs, hamburger }) => {
               p: 2,
             }}>
             <Box>
-              <Typography
-                sx={{ color: "#fff", fontSize: { xs: "20px", md: "32px" } }}>
+              <Typography sx={{ color: "#fff", fontSize: countdownSize }}>
                 {remainingTime.days}
               </Typography>
             </Box>
             <Box>
-              <Typography
-                sx={{ color: "#fff", fontSize: { xs: "20px", md: "32px" } }}>
-                Days
-              </Typography>
+              <Typography sx={{ color: "#fff", fontSize: countdownSize }}>Days</Typography>
             </Box>
           </Box>
           <Box
@@ -117,16 +117,12 @@ const Main = ({ countdownTimestampMs, hamburger }) => {
               p: 2,
             }}>
             <Box>
-              <Typography
-                sx={{ color: "#fff", fontSize: { xs: "20px", md: "32px" } }}>
+              <Typography sx={{ color: "#fff", fontSize: countdownSize }}>
                 {remainingTime.hours}
               </Typography>
             </Box>
             <Box>
-              <Typography
-                sx={{ color: "#fff", fontSize: { xs: "20px", md: "32px" } }}>
-                Hours
-              </Typography>
+              <Typography sx={{ color: "#fff", fontSize: countdownSize }}>Hours</Typography>
             </Box>
           </Box>
           <Box
@@ -137,16 +133,12 @@ const Main = ({ countdownTimestampMs, hamburger }) => {
               p: 2,
             }}>
             <Box>
-              <Typography
-                sx={{ color: "#fff", fontSize: { xs: "20px", md: "32px" } }}>
+              <Typography sx={{ color: "#fff", fontSize: countdownSize }}>
                 {remainingTime.minutes}
               </Typography>
             </Box>
             <Box>
-              <Typography
-                sx={{ color: "#fff", fontSize: { xs: "20px", md: "32px" } }}>
-                Mins
-              </Typography>
+              <Typography sx={{ color: "#fff", fontSize: countdownSize }}>Mins</Typography>
             </Box>
           </Box>
           <Box
@@ -156,23 +148,19 @@ const Main = ({ countdownTimestampMs, hamburger }) => {
               p: 3,
             }}>
             <Box>
-              <Typography
-                sx={{ color: "#fff", fontSize: { xs: "20px", md: "32px" } }}>
+              <Typography sx={{ color: "#fff", fontSize: countdownSize }}>
                 {remainingTime.seconds}
               </Typography>
             </Box>
             <Box>
-              <Typography
-                sx={{ color: "#fff", fontSize: { xs: "20px", md: "32px" } }}>
-                Secs
-              </Typography>
+              <Typography sx={{ color: "#fff", fontSize: countdownSize }}>Secs</Typography>
             </Box>
           </Box>
           <Typography
             variant='h1'
             sx={{
               color: "#fff",
-              fontSize: { xs: "24px", md: "32px" },
+              fontSize: countdownSize,
               gridColumn: "1 / -1",
               textAlign: "center",
             }}>

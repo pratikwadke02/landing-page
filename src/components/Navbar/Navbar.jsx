@@ -55,11 +55,7 @@ const Navbar = () => {
   ];
 
   const toggleDrawer = (anchor, open) => event => {
-    if (
-      event &&
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
+    if (event && event.type === "keydown" && (event.key === "Tab" || event.key === "Shift")) {
       return;
     }
 
@@ -82,12 +78,7 @@ const Navbar = () => {
       onClick={toggleDrawer("left", false)}
       onKeyDown={toggleDrawer("left", false)}>
       <Box sx={{ width: "100%" }}>
-        <img
-          src={images.acm_logo}
-          alt=''
-          height={50}
-          style={{ marginLeft: "10px" }}
-        />
+        <img src={images.acm_logo} alt='' height={50} style={{ marginLeft: "10px" }} />
       </Box>
       <List sx={{ display: "flex", flexDirection: "column" }}>
         {navItems.map((item, index) => (
@@ -120,21 +111,24 @@ const Navbar = () => {
 
       <Box
         sx={{
-          flexDirection: "column",
-          alignItems: "center",
-          width: "100%",
-          display: { xs: "none", md: "flex" },
-          maxWidth: "200px",
+          display: { xs: "none", md: "grid" },
+          gridTemplateRows: "auto 1fr",
           gridRow: "1 / -1",
         }}>
         <Box href='http://djacm.co.in/' component='a'>
           <img
             src={images.acm_logo}
-            alt=''
-            style={{ width: "100%", height: "auto", maxHeight: "150px" }}
+            alt='DJACM Logo'
+            style={{ maxHeight: "150px", objectFit: "contain" }}
           />
         </Box>
-        <Box>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            gap: { md: "1em", lg: "1.5em", xl: "2em" },
+            pt: "2em",
+          }}>
           {navItems.map((item, index) => {
             return (
               <Box
@@ -143,7 +137,6 @@ const Navbar = () => {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  m: "2em auto",
                   textDecoration: "none",
                 }}
                 to={item.to}

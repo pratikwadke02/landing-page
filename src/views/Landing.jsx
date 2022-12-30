@@ -40,7 +40,7 @@ const Landing = () => {
             display: "grid",
             gridTemplateColumns: { xs: "100px 1fr", md: "auto 1fr" },
             gridTemplateRows: { xs: "100px 1fr 100px", md: "5em 1fr 5em" },
-            minHeight: { xs: "90vh", sm: "100vh" },
+            minHeight: { xs: "90dvh", sm: "100dvh" },
             position: "relative",
             bottom: "0",
           }}>
@@ -50,14 +50,12 @@ const Landing = () => {
             sx={{
               display: "flex",
               alignItems: "flex-end",
-              justifyContent: "center",
+              justifyContent: { xs: "center", md: "none" },
               flexDirection: "column",
-              p: { xs: "0 1em", md: "0 1.5em" },
+              p: { xs: "0 1em", md: "0.75em" },
             }}>
             <IconButton onClick={handleClick}>
-              <AccountCircleOutlinedIcon
-                sx={{ color: "#fff", fontSize: "3rem" }}
-              />
+              <AccountCircleOutlinedIcon sx={{ color: "#fff", fontSize: "3rem" }} />
             </IconButton>
             <Menu
               id='basic-menu'
@@ -77,19 +75,10 @@ const Landing = () => {
               placeItems: "center",
             }}>
             <Routes>
-              <Route
-                path='/'
-                element={<Main countdownTimestampMs={1677974399000} />}
-              />
+              <Route path='/' element={<Main countdownTimestampMs={1677974399000} />} />
               <Route path='/signup' element={<SignUp />} />
-              <Route
-                path='/themes'
-                element={<div className='test'>Coming Soon...</div>}
-              />
-              <Route
-                path='/rules'
-                element={<div className='test'>Coming Soon...</div>}
-              />
+              <Route path='/themes' element={<div className='test'>Coming Soon...</div>} />
+              <Route path='/rules' element={<div className='test'>Coming Soon...</div>} />
               <Route path='/faqs' element={<Faq />} />
             </Routes>
           </Box>
