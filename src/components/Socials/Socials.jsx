@@ -5,7 +5,7 @@ import LanguageIcon from "@mui/icons-material/Language";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Socials = () => {
-  const size = { xs: "3rem", md: "3rem" };
+  const size = { xs: "3rem", md: "1.5rem", lg: "2.5rem" };
 
   const socials = [
     {
@@ -28,8 +28,9 @@ const Socials = () => {
         display: "grid",
         gridTemplateColumns: "repeat(3,1fr)",
         placeItems: "center",
-        width: "300px",
-        m: { xs: "0 auto", md: "0 2em" },
+        width: "fit-content",
+        gap: "1.5em",
+        m: { xs: "0.25em auto", md: "1em 2em", lg: "1.5em 2em" },
         gridColumn: { xs: "1 / -1", md: "auto" },
       }}>
       {socials.map((item, index) => {

@@ -29,7 +29,7 @@ const Landing = () => {
           width: "100%",
           height: "100%",
           objectFit: "cover",
-          position: "absolute",
+          position: "fixed",
           inset: "0",
           zIndex: "-1",
         }}
@@ -39,8 +39,8 @@ const Landing = () => {
           sx={{
             display: "grid",
             gridTemplateColumns: { xs: "100px 1fr", md: "auto 1fr" },
-            gridTemplateRows: { xs: "100px 1fr 100px", md: "5em 1fr 5em" },
-            minHeight: { xs: "90dvh", sm: "100dvh" },
+            gridTemplateRows: { xs: "100px 1fr 100px", md: "3em auto 3rem" },
+            minHeight: { xs: "90vh", sm: "95vh" },
             position: "relative",
             bottom: "0",
           }}>
@@ -55,7 +55,9 @@ const Landing = () => {
               p: { xs: "0 1em", md: "0.75em" },
             }}>
             <IconButton onClick={handleClick}>
-              <AccountCircleOutlinedIcon sx={{ color: "#fff", fontSize: "3rem" }} />
+              <AccountCircleOutlinedIcon
+                sx={{ color: "#fff", fontSize: { md: "2rem", lg: "3rem" } }}
+              />
             </IconButton>
             <Menu
               id='basic-menu'

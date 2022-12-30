@@ -30,7 +30,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
-  const size = "2.5rem";
+  const size = { md: "1.75rem", lg: "2.5rem" };
   const navItems = [
     {
       name: "HOME",
@@ -114,12 +114,13 @@ const Navbar = () => {
           display: { xs: "none", md: "grid" },
           gridTemplateRows: "auto 1fr",
           gridRow: "1 / -1",
+          height: "100%",
         }}>
         <Box href='http://djacm.co.in/' component='a'>
           <img
             src={images.acm_logo}
             alt='DJACM Logo'
-            style={{ maxHeight: "150px", objectFit: "contain" }}
+            style={{ maxHeight: "6rem", objectFit: "contain" }}
           />
         </Box>
         <Box
@@ -127,7 +128,7 @@ const Navbar = () => {
             display: "flex",
             flexDirection: "column",
             gap: { md: "1em", lg: "1.5em", xl: "2em" },
-            pt: "2em",
+            pt: { md: "0.5em", lg: "1em", xl: "1.5em" },
           }}>
           {navItems.map((item, index) => {
             return (

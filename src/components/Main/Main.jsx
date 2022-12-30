@@ -27,7 +27,7 @@ const Main = ({ countdownTimestampMs, hamburger }) => {
     setRemainingTime(getRemainingTimeUntilMsTimestamp(countdown));
   };
 
-  const countdownSize = { xs: "1rem", md: "1.25rem", lg: "1.6rem" };
+  const countdownSize = { xs: "1rem", md: "1rem", lg: "1.5rem" };
   return (
     <Box
       sx={{
@@ -38,26 +38,26 @@ const Main = ({ countdownTimestampMs, hamburger }) => {
       }}>
       <Box
         sx={{
-          display: "flex",
+          display: "block",
           flexDirection: "column",
           alignItems: { xs: "center", sm: "start" },
           maxWidth: "900px",
-          m: { xs: "0 2em", md: "1.5em 3em 0" },
+          m: { xs: "0 2em", md: "1em 3em 0", lg: "1em 2em 0" },
           textAlign: { xs: "center", sm: "start" },
         }}>
         <Typography
           variant='h1'
           sx={{
             color: "#fff",
-            fontSize: { xs: "80px", sm: "100px", md: "5rem", lg: "5rem", xl: "7.5rem" },
+            fontSize: { xs: "80px", sm: "100px", md: "4.5rem", lg: "6rem", xl: "7.5rem" },
             lineHeight: "1.2",
             borderBottom: { xs: "#fff 10px solid", md: "#fff 12px solid" },
-            minWidth: { xs: "6.25ch", md: "6.25ch" },
+            maxWidth: { xs: "6.25ch", md: "6.25ch" },
           }}>
           LOC 5.0
         </Typography>
 
-        <Box sx={{ mt: "2em" }}>
+        <Box sx={{ mt: { md: "1em", lg: "2em" } }}>
           <Typography
             variant='h2'
             sx={{
@@ -83,7 +83,7 @@ const Main = ({ countdownTimestampMs, hamburger }) => {
         sx={{
           display: "flex",
           flexDirection: "row",
-          justifyContent: "flex-end",
+          justifyContent: { xs: "center", sm: "flex-end" },
         }}>
         <Box
           sx={{
@@ -91,7 +91,7 @@ const Main = ({ countdownTimestampMs, hamburger }) => {
             gridTemplateColumns: "repeat(4,1fr)",
             alignItems: "center",
             justifyContent: "center",
-            m: { md: "0 5em 3em 0" },
+            m: { md: "0 3em 0 0", lg: "0 5em 0 0" },
           }}>
           <Box
             sx={{
