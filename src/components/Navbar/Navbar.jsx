@@ -129,6 +129,7 @@ const Navbar = () => {
             flexDirection: "column",
             gap: { md: "1em", lg: "1.5em", xl: "2em" },
             pt: { md: "0.5em", lg: "1em", xl: "1.5em" },
+            ml: "1.8em",
           }}>
           {navItems.map((item, index) => {
             return (

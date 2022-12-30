@@ -39,7 +39,7 @@ const Landing = () => {
           sx={{
             display: "grid",
             gridTemplateColumns: { xs: "100px 1fr", md: "auto 1fr" },
-            gridTemplateRows: { xs: "100px 1fr 100px", md: "5em auto 3rem" },
+            gridTemplateRows: { xs: "100px 1fr 100px", md: "6rem auto 3rem" },
             minHeight: { xs: "90vh", sm: "95vh" },
             position: "relative",
             bottom: "0",
@@ -52,11 +52,11 @@ const Landing = () => {
               alignItems: "flex-end",
               justifyContent: "center",
               flexDirection: "column",
-              p: { xs: "0 1em", md: "0.75em" },
+              p: { xs: "0 1em", md: "0 0.75em" },
             }}>
             <IconButton onClick={handleClick}>
               <AccountCircleOutlinedIcon
-                sx={{ color: "#fff", fontSize: { md: "2rem", lg: "3rem" } }}
+                sx={{ color: "#fff", fontSize: { md: "2rem", lg: "3.5rem" } }}
               />
             </IconButton>
             <Menu
