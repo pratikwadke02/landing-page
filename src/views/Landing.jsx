@@ -52,7 +52,7 @@ const Landing = () => {
               alignItems: "flex-end",
               justifyContent: "center",
               flexDirection: "column",
-              p: { xs: "0 1em", md: "0 0.75em" },
+              p: { xs: "0 1em", md: "0 1em" },
             }}>
             <IconButton onClick={handleClick}>
               <AccountCircleOutlinedIcon

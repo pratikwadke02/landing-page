@@ -59,20 +59,18 @@ const Faq = () => {
           expanded={Expanded == i}
           onChange={_ => setExpanded(x => (x == i ? null : i))}>
           <AccordionSummary
-            sx={{ fontSize: "12px" }}
+            sx={{ fontSize: "1rem", "& .MuiAccordionSummary-content": { m: "0.25em 0" } }}
             expandIcon={<ExpandMoreIcon />}
-            aria-controls='panel1a-content'
-            id='panel1a-header'>
+            aria-controls='panel-content'
+            id='panel-header'>
             <Typography
-              sx={{ fontWeight: "bold", fontSize: { xs: "16px", md: "24px" } }}
+              sx={{ fontWeight: "bold", fontSize: { xs: "0.8rem", md: "1.1rem" } }}
               variant='h1'>
               {item.Q}
             </Typography>
           </AccordionSummary>
           <AccordionDetails sx={{ color: "primary.main" }}>
-            <Typography
-              sx={{ fontSize: { xs: "16px", md: "24px" } }}
-              variant='body1'>
+            <Typography sx={{ fontSize: { xs: "0.8rem", md: "1.2rem" } }} variant='body1'>
               {item.A}
             </Typography>
           </AccordionDetails>
